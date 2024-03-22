@@ -88,11 +88,11 @@ function App() {
       render: (text) => loading ? <Skeleton active paragraph={{ rows: 1 }} /> : text,
     },
   ];
-  
+
   tableData();
   return (
     <div className="App">
-      <Table className='table' columns={columns} scroll={{x: '100%'}} dataSource={loading ? [{}] : data} />
+      <Table className='table' pagination={false} bordered columns={columns} scroll={{x: '100%'}} dataSource={loading ? [{}] : data} loading={loading} />
     </div>
   );
 }
